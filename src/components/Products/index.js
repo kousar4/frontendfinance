@@ -31,7 +31,7 @@ class Products extends Component {
 
     const jwtToken = Cookies.get('jwt_token')
 
-    const apiUrl = 'https://apis.ccbp.in/prime-deals'
+    const apiUrl = 'https://financep-web.herokuapp.com/posts'
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
