@@ -6,6 +6,7 @@ const DisplayCard = props => {
 
   return (
     <li className="product-item">
+      <p>Post Details</p>
       <h1 className="user-id">{userId}</h1>
       <p className="body">{body}</p>
       <h1 className="title">{title}</h1>
