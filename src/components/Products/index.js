@@ -63,7 +63,7 @@ class Products extends Component {
     return (
       <div>
         <Header />
-        <h1 className="primedeals-list-heading">Exclusive Prime Deals</h1>
+        <h1 className="list-heading">Exclusive Prime Deals</h1>
         <ul className="products-list">
           {postList.map(product => (
             <DisplayCard displayData={product} key={product.id} />
@@ -75,7 +75,7 @@ class Products extends Component {
 
   renderFailureView = () => (
     <>
-      <p className="primedeals-list-heading">Not Found</p>
+      <p className="list-heading">Not Found</p>
     </>
   )
 
