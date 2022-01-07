@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <Header />
       <div className="home-container">
-        <h1>Home</h1>
+        <h1>HOME</h1>
         <ReactFileReader fileTypes={['.json']} handleFiles={handleFiles}>
           <button className="btn">Upload</button>
         </ReactFileReader>
