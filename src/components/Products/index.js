@@ -36,6 +36,7 @@ class Products extends Component {
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
+         'Content-type': 'application/json',
       },
       method: 'GET',
     }
