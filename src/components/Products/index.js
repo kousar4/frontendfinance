@@ -31,21 +31,18 @@ class Products extends Component {
 
     const jwtToken = Cookies.get('jwt_token')
 
-<<<<<<< HEAD
     const apiUrl = 'https://financep-web.herokuapp.com/posts'
-=======
-    const apiUrl = 'https://apis.ccbp.in/prime-deals'
->>>>>>> 1509044efc85456d8d531ffbbeadf1eb8c5eedbe
     const options = {
       headers: {
         Authorization: `Bearer ${jwtToken}`,
+        'Content-type': 'application/json',
       },
       method: 'GET',
     }
     const response = await fetch(apiUrl, options)
     if (response.ok === true) {
       const fetchedData = await response.json()
-      const updatedData = fetchedData.prime_deals.map(product => ({
+      const updatedData = fetchedData.postList.map(product => ({
         userId: product.userId,
         id: product.id,
         title: product.title,
@@ -67,11 +64,9 @@ class Products extends Component {
     return (
       <div>
         <Header />
-<<<<<<< HEAD
+
         <h1 className="list-heading">Exclusive Prime Deals</h1>
-=======
-        <h1 className="primedeals-list-heading">Exclusive Prime Deals</h1>
->>>>>>> 1509044efc85456d8d531ffbbeadf1eb8c5eedbe
+
         <ul className="products-list">
           {postList.map(product => (
             <DisplayCard displayData={product} key={product.id} />
@@ -83,11 +78,7 @@ class Products extends Component {
 
   renderFailureView = () => (
     <>
-<<<<<<< HEAD
       <p className="list-heading">Not Found</p>
-=======
-      <p className="primedeals-list-heading">Not Found</p>
->>>>>>> 1509044efc85456d8d531ffbbeadf1eb8c5eedbe
     </>
   )
 
