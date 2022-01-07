@@ -42,7 +42,7 @@ class Products extends Component {
     const response = await fetch(apiUrl, options)
     if (response.ok === true) {
       const fetchedData = await response.json()
-      const updatedData = fetchedData.prime_deals.map(product => ({
+      const updatedData = fetchedData.postList.map(product => ({
         userId: product.userId,
         id: product.id,
         title: product.title,
